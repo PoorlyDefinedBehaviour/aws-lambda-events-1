@@ -330,8 +330,8 @@ pub struct CognitoEventUserPoolsDefineAuthChallengeResponse {
     #[serde(deserialize_with = "deserialize_lambda_string")]
     #[serde(default)]
     pub challenge_name: Option<String>,
-    pub issue_tokens: bool,
-    pub fail_authentication: bool,
+    pub issue_tokens: Option<bool>,
+    pub fail_authentication: Option<bool>,
 }
 
 /// `CognitoEventUserPoolsDefineAuthChallenge` sent by AWS Cognito User Pools to initiate custom authentication flow
